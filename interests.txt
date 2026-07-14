@@ -1,0 +1,12 @@
+# One interest per line. Edit this file anytime on github.com (pencil icon) — next digest picks it up.
+# Lines starting with # are ignored. Prefix with "-" to de-prioritize a topic.
+
+Korean & international film industry, festivals (especially BIFF, indie/festival cinema), production news
+US stock market, dividend/ETF investing — holds DGRO, VIG, AAPL, MSFT, V
+AI tools for video/image generation and filmmaking (Midjourney, Seedance, Kling, Runway etc.)
+Korean economy news affecting freelancers (tax, interest rates, KRW/USD exchange rate)
+Camera/cinema gear industry news
+
+- celebrity gossip
+- sports
+- crime stories unless genuinely major
