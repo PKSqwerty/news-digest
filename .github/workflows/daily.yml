@@ -30,15 +30,6 @@ jobs:
           PAGES_URL: ${{ vars.PAGES_URL }}
         run: python digest.py
 
-      - name: Commit web version
-        run: |
-          git config user.name "digest-bot"
-          git config user.email "actions@github.com"
-          git add docs/
-          git diff --cached --quiet || git commit -m "digest $(date +%F)"
-          git fetch origin main
-          git rebase origin/main || (git rebase --abort && git push --force-with-lease origin main)
-          git push origin main
 
       # Optional: auto-rotate Kakao refresh token (needs GH_PAT secret with repo scope)
       - name: Rotate Kakao refresh token (if issued)
