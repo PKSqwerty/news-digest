@@ -1,0 +1,52 @@
+name: Daily News Digest
+
+on:
+  schedule:
+    - cron: "0 22 * * *"   # 22:00 UTC = 07:00 KST
+  workflow_dispatch: {}     # manual "Run workflow" button for testing
+
+permissions:
+  models: read      # free LLM access via GITHUB_TOKEN
+  contents: write   # commit the web version back to the repo
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Run digest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # optional — Claude if set, free model if not
+          KAKAO_REST_API_KEY: ${{ secrets.KAKAO_REST_API_KEY }}
+          KAKAO_REFRESH_TOKEN: ${{ secrets.KAKAO_REFRESH_TOKEN }}
+          PAGES_URL: ${{ vars.PAGES_URL }}
+        run: python digest.py
+
+      - name: Commit web version
+        run: |
+          git config user.name "digest-bot"
+          git config user.email "actions@github.com"
+          git add docs/
+          git diff --cached --quiet || git commit -m "digest $(date +%F)"
+          git push
+
+      # Optional: auto-rotate Kakao refresh token (needs GH_PAT secret with repo scope)
+      - name: Rotate Kakao refresh token (if issued)
+        if: ${{ hashFiles('new_refresh_token.txt') != '' }}
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -n "$GH_TOKEN" ]; then
+            gh secret set KAKAO_REFRESH_TOKEN --body "$(cat new_refresh_token.txt)"
+            echo "Refresh token rotated automatically."
+          else
+            echo "::warning::New refresh token issued but GH_PAT not set — update KAKAO_REFRESH_TOKEN manually."
+          fi
