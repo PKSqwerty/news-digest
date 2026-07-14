@@ -5,7 +5,8 @@ Korean & international film industry, festivals (especially BIFF, indie/festival
 US stock market, dividend/ETF investing — holds DGRO, VIG, AAPL, MSFT, V
 AI tools for video/image generation and filmmaking (Midjourney, Seedance, Kling, Runway etc.)
 Korean economy news affecting freelancers (tax, interest rates, KRW/USD exchange rate)
-Camera/cinema gear industry news
+Camera/cinema gear: new cameras, lenses, lights, rigs, firmware (RED, ARRI, Sony, Canon, Blackmagic, DJI, Aputure etc.)
+Korean film industry: 영화계, 영화제 (BIFF·전주·부천), 박스오피스, 제작/투자 news
 
 - celebrity gossip
 - sports

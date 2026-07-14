@@ -31,6 +31,8 @@ FEEDS = {
     "Korea": [
         "https://www.yna.co.kr/rss/news.xml",       # 연합뉴스 주요뉴스 (wire service = 최대한 중도)
         "https://www.yna.co.kr/rss/economy.xml",    # 연합뉴스 경제
+        "https://www.yna.co.kr/rss/politics.xml",   # 연합뉴스 정치
+        "https://www.yna.co.kr/rss/society.xml",    # 연합뉴스 사회
         "http://www.khan.co.kr/rss/rssdata/total_news.xml",   # 경향 (좌측) — 비교용
         "https://www.chosun.com/arc/outboundfeeds/rss/?outputType=xml",  # 조선 (우측) — 비교용
     ],
@@ -38,6 +40,12 @@ FEEDS = {
         "https://variety.com/feed/",
         "https://www.hollywoodreporter.com/feed/",
         "https://www.screendaily.com/full-rss",
+        "https://news.google.com/rss/search?q=%EC%98%81%ED%99%94%EA%B3%84%20OR%20%EC%98%81%ED%99%94%EC%A0%9C%20OR%20%ED%95%9C%EA%B5%AD%EC%98%81%ED%99%94&hl=ko&gl=KR&ceid=KR:ko",  # 국내 영화계/영화제 뉴스
+    ],
+    "Camera / Gear": [
+        "https://www.cined.com/feed/",
+        "https://www.newsshooter.com/feed/",
+        "https://petapixel.com/feed/",
     ],
     "Tech & AI": [
         "https://techcrunch.com/feed/",
@@ -54,7 +62,13 @@ SOURCE_LABELS = {
     "khan.co.kr": "경향", "chosun.com": "조선", "variety.com": "Variety",
     "hollywoodreporter.com": "THR", "screendaily.com": "Screen",
     "techcrunch.com": "TC", "theverge.com": "Verge", "cnbc.com": "CNBC",
+    "cined.com": "CineD", "newsshooter.com": "Newsshooter", "petapixel.com": "PetaPixel",
 }
+
+# How the digest is delivered to KakaoTalk:
+#   "sections" = one message per topic section (scroll-friendly, subtext allowed)
+#   "single"   = everything compressed into one ~900-char message
+SEND_MODE = "sections"
 
 def load_interests():
     """Reads interests.txt — one topic per line, '-' prefix = de-prioritize."""
@@ -125,7 +139,14 @@ def build_prompt(sections):
         for it in items:
             corpus += f"- [{it['source']}] {it['title']} :: {it['summary']}\n"
 
-    today = datetime.now(KST).strftime("%Y-%m-%d (%A)")
+    today = datetime.now(KST).strftime("%Y-%m-%d (%a)")
+    if SEND_MODE == "single":
+        budget = "STRICT LIMIT: total under 880 characters — it must fit ONE KakaoTalk message. One line per story, no subtext lines."
+        per_section = "1-3 stories per section, single line each"
+    else:
+        budget = "STRICT LIMIT: each section under 800 characters; total under 2600 characters."
+        per_section = ("2-4 stories per section. Each story: '• headline — micro-context clause (src)'. "
+                       "For ★ stories and the day's 1-2 biggest stories, add ONE short indented subtext line below (start it with '  ↳ ')")
 
     return f"""You are writing a personal morning news digest for {today} KST.
 
@@ -133,22 +154,18 @@ def build_prompt(sections):
 
 RULES:
 - STRICTLY fact-first: no opinion, no editorializing, no loaded adjectives. If something is disputed/unconfirmed, say so.
-- SOURCE ATTRIBUTION: each headline is tagged [source]. End each line with its source(s) in parentheses, e.g. (연합) or (BBC/Verge).
-- CROSS-OUTLET COMPARISON: when the SAME story appears from multiple outlets, merge it into ONE item listing all sources — and if outlets differ in numbers, emphasis, or framing, state the difference neutrally in one clause, e.g. "경향 emphasizes X while 조선 leads with Y". Never adopt one framing as fact.
-- LANGUAGE: the "Korea" section is written in Korean (한국어). All other sections in English.
-- GLOSSARY MARKERS: wrap terms the reader might not know in {{{{term|translation}}}} format.
-  In English sections: gloss difficult English terms with Korean, e.g. {{{{quantitative easing|양적완화}}}}.
-  In the Korean section: gloss difficult 한자어/전문용어 with simple English, e.g. {{{{금리 인하|interest rate cut}}}}.
-  Use 5-15 markers total across the digest, only for genuinely non-obvious terms.
+- SOURCE ATTRIBUTION: each headline is tagged [source]. End each line with source(s) in parentheses, e.g. (연합) or (BBC/Verge).
+- CROSS-OUTLET: when the SAME story appears from multiple outlets, merge into ONE item listing all sources; if outlets differ in numbers/framing, note it in a short clause. Never adopt one framing as fact.
+- LANGUAGE: Korean-origin stories in Korean (한국어), foreign stories in English. Gloss genuinely difficult terms with {{{{term|translation}}}} markers (max 8 total).
 - STRUCTURE (plain text, no markdown):
   Line 1: "📰 {today}"
-  Then AT MOST 3 short paragraphs, no headers, no bullets:
-  P1 — the day's most important world + 한국 news woven together (한국 뉴스 문장은 한국어로, world news sentences in English).
-  P2 — the reader's specifics: film industry / festivals, his stocks (DGRO/VIG/AAPL/MSFT/V), AI filmmaking tools. Flag directly relevant items with ★.
-  P3 (only if needed) — markets/tech leftovers worth knowing. Omit if thin.
-  Each paragraph 3-5 sentences max. Sources in parentheses at sentence ends.
-  Flag stories directly relevant to the reader with ★ and one clause on why it matters to them.
-- Total under 1800 characters. Readable in under 2 minutes on a phone. If a slow news day, shorter is better — never pad.
+  Then these sections, in this order, each as "▎헤더" on its own line:
+  ▎세계 / ▎한국 / ▎영화 / ▎장비 / ▎Tech·AI / ▎시장
+  {per_section}, formatted "• headline — micro-context clause (src)".
+  Selection bar: pick what a well-informed person MUST know today + what matters to this reader. Skip filler; skip a section entirely if nothing meets the bar.
+  Flag stories directly relevant to the reader (film industry, DGRO/VIG/AAPL/MSFT/V, filmmaking gear/AI tools) with ★ at line start.
+- {budget}
+- No preamble, no sign-off.
 
 HEADLINES:
 {corpus}
@@ -298,10 +315,27 @@ def chunk_text(text, size):
         chunks.append(current.rstrip())
     return chunks
 
+def split_sections(text):
+    """Split the digest into one chunk per ▎section; title line joins the first section."""
+    lines = text.split("\n")
+    chunks, current = [], ""
+    for line in lines:
+        if line.startswith("▎") and "▎" in current:
+            chunks.append(current.rstrip())
+            current = ""
+        current += line + "\n"
+    if current.strip():
+        chunks.append(current.rstrip())
+    # safety: if any section still exceeds Kakao's cap, sub-split it by size
+    final = []
+    for c in chunks:
+        final.extend(chunk_text(c, 950) if len(c) > 950 else [c])
+    return final
+
 def send_kakao(text):
     token = kakao_access_token()
     link = PAGES_URL or "https://news.google.com"
-    chunks = chunk_text(text, 950)
+    chunks = split_sections(text) if SEND_MODE == "sections" else chunk_text(text, 950)
     for i, chunk in enumerate(chunks):
         if i == len(chunks) - 1 and PAGES_URL:
             chunk += f"\n\n🔗 웹 버전 (단어 탭 번역): {PAGES_URL}"
