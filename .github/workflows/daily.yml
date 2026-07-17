@@ -1,21 +1,21 @@
 name: Daily News Digest
 
 on:
+  workflow_dispatch: {}   # triggered by cron-job.org (or the manual Run workflow button)
   schedule:
-    - cron: "43 21 * * *"   # 21:43 UTC = 06:43 KST
-  workflow_dispatch: {}     # manual "Run workflow" button for testing
+    - cron: "43 21 * * *" # backup: 06:43 KST via GitHub's own (unreliable) scheduler
 
 permissions:
-  models: read      # free LLM access via GITHUB_TOKEN
-  contents: write   # commit the web version back to the repo
+  models: read      # free LLM fallback via GITHUB_TOKEN
+  contents: write   # save digest history for continuity/weekly recap
 
 jobs:
   digest:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -24,14 +24,22 @@ jobs:
       - name: Run digest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # optional — Claude if set, free model if not
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # Claude if set, free model if not
           KAKAO_REST_API_KEY: ${{ secrets.KAKAO_REST_API_KEY }}
           KAKAO_REFRESH_TOKEN: ${{ secrets.KAKAO_REFRESH_TOKEN }}
           PAGES_URL: ${{ vars.PAGES_URL }}
         run: python digest.py
 
+      - name: Save digest history
+        run: |
+          git config user.name "digest-bot"
+          git config user.email "actions@github.com"
+          git add state/ docs/ 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "digest $(date +%F)"
+          git fetch origin main
+          git rebase origin/main || (git rebase --abort && echo "rebase conflict — skipping history save this run")
+          git push origin main || echo "push skipped"
 
-      # Optional: auto-rotate Kakao refresh token (needs GH_PAT secret with repo scope)
       - name: Rotate Kakao refresh token (if issued)
         if: ${{ hashFiles('new_refresh_token.txt') != '' }}
         env:
