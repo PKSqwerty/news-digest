@@ -88,10 +88,44 @@ def load_interests():
         ctx += "De-prioritize: " + ", ".join(avoid) + ".\n"
     return ctx
 
-MAX_ITEMS_PER_FEED = 8
+MAX_ITEMS_PER_FEED = 6
+MAX_ITEMS_PER_SECTION = 14   # cap after merging a section's feeds (keeps LLM payload sane)
+SUMMARY_CHARS = 220
 LOOKBACK_HOURS = 26
 
 PAGES_URL = os.environ.get("PAGES_URL", "")  # e.g. https://username.github.io/news-digest/
+
+# ============================================================
+# 0. STATE — digest history for continuity & weekly recap
+# ============================================================
+
+STATE_DIR = "state/history"
+
+def load_yesterday():
+    """Most recent past digest text, or '' if none."""
+    try:
+        files = sorted(f for f in os.listdir(STATE_DIR) if f.endswith(".txt"))
+        return open(os.path.join(STATE_DIR, files[-1]), encoding="utf-8").read() if files else ""
+    except FileNotFoundError:
+        return ""
+
+def load_week():
+    """Up to the last 7 digests, oldest first, for the Sunday recap."""
+    try:
+        files = sorted(f for f in os.listdir(STATE_DIR) if f.endswith(".txt"))[-7:]
+        return [(f[:-4], open(os.path.join(STATE_DIR, f), encoding="utf-8").read()) for f in files]
+    except FileNotFoundError:
+        return []
+
+def save_today(digest, date_str):
+    os.makedirs(STATE_DIR, exist_ok=True)
+    with open(os.path.join(STATE_DIR, f"{date_str}.txt"), "w", encoding="utf-8") as f:
+        f.write(digest)
+    # keep only the last 14 days
+    files = sorted(f for f in os.listdir(STATE_DIR) if f.endswith(".txt"))
+    for old in files[:-14]:
+        os.remove(os.path.join(STATE_DIR, old))
+    print(f"[state] saved {date_str}, {min(len(files),14)} days kept")
 
 # ============================================================
 # 1. FETCH
@@ -115,13 +149,13 @@ def fetch_articles():
                     items.append({
                         "source": label,
                         "title": entry.get("title", "").strip(),
-                        "summary": re.sub(r"<[^>]+>", "", entry.get("summary", "") or "")[:400],
+                        "summary": re.sub(r"<[^>]+>", "", entry.get("summary", "") or "")[:SUMMARY_CHARS],
                         "link": entry.get("link", ""),
                     })
             except Exception as e:
                 print(f"[warn] feed failed: {url} -> {e}")
-        sections[section] = items
-        print(f"[fetch] {section}: {len(items)} items")
+        sections[section] = items[:MAX_ITEMS_PER_SECTION]
+        print(f"[fetch] {section}: {len(items)} items -> kept {len(sections[section])}")
     return sections
 
 # ============================================================
@@ -146,6 +180,30 @@ def build_prompt(sections):
     else:
         budget = "LIMIT: each section under 800 characters. Total under 3500 characters."
         per_section = "2-4 stories per section"
+
+    yesterday = load_yesterday()
+    continuity_block = ""
+    if yesterday:
+        continuity_block = f"""
+CONTINUITY — yesterday's digest is below. Rules:
+- A story already covered yesterday appears again ONLY if there is a genuinely NEW development; write it as an update, e.g. "헤드라인 — 새 전개: ..." / "headline — update: ...".
+- If nothing changed, skip the story entirely, even if today's feeds repeat it. This keeps the digest clutter-free.
+YESTERDAY:
+{yesterday}
+"""
+
+    weekly_block = ""
+    if datetime.now(KST).weekday() == 6:  # Sunday
+        week = load_week()
+        if week:
+            week_text = "\n\n".join(f"[{d}]\n{t}" for d, t in week)
+            weekly_block = f"""
+SUNDAY EXTRA — after the normal sections, append ONE final section:
+<주간 정리> one-line summary of the week
+• 3-6 bullets: the week's biggest storylines and how they developed, plus the week in the reader's areas (film industry, his stocks, gear/AI). Same bullet format.
+Base it on this week's digests:
+{week_text}
+"""
 
     return f"""You are writing a personal morning news digest for {today} KST.
 
@@ -184,7 +242,7 @@ FORMAT RULES:
 - Selection bar: what a well-informed person MUST know today + what matters to this reader.
 - {budget}
 - Plain text only. No markdown, no preamble, no sign-off.
-
+{continuity_block}{weekly_block}
 HEADLINES:
 {corpus}
 """
@@ -383,6 +441,7 @@ if __name__ == "__main__":
         raise SystemExit(1)
     digest = summarize(sections)
     print("---- DIGEST ----\n" + digest + "\n----------------")
+    save_today(strip_markers(digest), date_str)
     write_site(digest, date_str)
     send_kakao(strip_markers(digest))
     print("[done]")
