@@ -1,41 +1,42 @@
-📰 2026-07-20 (Mon)
+📰 2026-07-19 (Sun)
 
-<세계> US-Iran tension, Ukraine unrest, and climate events persist
-• US-Iran conflict: Ninth night of US airstrikes reported, Iran claims new port damage — Strait of Hormuz disruptions continue (BBC/Al Jazeera/CNN)
-• Ukrainian soldiers continue protests over defence minister's removal — unrest persists, leadership criticized (BBC)
-• Wildfire smoke remains in US Northeast, health warnings extended — climate change cited as factor (NBC News/Forbes)
+<세계> US-Iran tension escalates, Ukraine strikes, climate events persist
+• US troops killed in Iranian attack in Jordan — renewed hostilities, Gulf region instability (BBC/CNN/Reuters)
+• Ukrainian drones hit Russian logistics warehouses, 9 dead, 80+ injured — escalation in air war, supply chain impact (BBC/AP)
+• Thick wildfire smoke lingers over US Mid-Atlantic — air quality alerts continue, climate change cited (Washington Post/The Hill)
 
-<한국> 호우경보·경제·청년 정책 등 주요 이슈 지속
-• 전남·전북·광주 등 호우경보 유지 — 집중호우 피해 우려, 일부 지역 피해 보고 (연합)
-• 박홍근 장관 "반도체 호황기 급격히 안 꺼져…청년 정책 투자 확대" — 경기 전망 반복 (연합)
-• "전용 모기지 약속 이행하라" 사전청약자 집회 — 주택 정책 논란 지속 (연합)
+<한국> 북·남 경제·정치·노동 이슈, 구조개편·장관 방미 등 주요 동향
+• 北 최선희 외무상, 모스크바 방문 공개 — 북러 외교 협력 강화 움직임 (연합)
+• 산업장관 이번주 방미, '쿠팡 사태' 논의 가능성 — 한미 경제 갈등 현안 (연합)
+• 이번주 크레딧 2.3조 발행 예정 — 롯데케미칼 등 수요예측, 금융시장 동향 (연합)
+• 울산동부노동지청, 근로 위반 223건 적발 — 체불임금 5.5억 원 지급 조치 (연합)
 
-<영화> 글로벌 박스오피스·AI 영화제·OTT 유통 변화
-★ ‘The Odyssey’ opening weekend nears $120M worldwide — box office surge, global distribution impact (Variety)
-  ↳ Korean OTT·극장 유통사, 해외 흥행 분석 착수; 국내 배급 전략 변화 가능성
-• K-CULTURE AI 국제영화제, 신효정 감독 '화랑' Best Beauty Art 대상 수상 — AI 활용 영화 제작 확대 (파이낸스투데이)
-• Utopia Distribution shifts releases toward eventification — adapting to fandom, younger audiences (Variety)
+<영화> 글로벌 박스오피스·제작·AI·국내외 수상 등 변화
+★ ‘The Odyssey’ galloping to $120M in muscular box office opening — Korean OTT·극장 유통사, 해외 흥행 분석 착수 (THR/Variety)
+  ↳ 국내 배급 전략 변화 가능성, Nolan 신작 영향력 확대
+• BAFTA Student Award Winners announced — 스페인·프랑스·중국·미국 신인 감독 수상, 글로벌 신진 인재 부상 (THR)
+• 인천 학생 제작 영화, 부산국제어린이청소년영화제 2편 수상 — 국내 청소년 영화 제작 활성화 (더코리아)
 
-<장비> 신제품·필름·렌즈 시장 동향
-★ CineStill 50D demand rises after summer spotlight — 필름 촬영 트렌드 지속, 국내외 수요 증가 (PetaPixel)
-  ↳ 50D 저감도·색 재현력, 국내 필름샵 주문량 급증
-• The Best Deals on Versatile Zooms for Mirrorless Cameras — 렌즈 시장 경쟁 심화 (PetaPixel)
+<장비> 신제품·필름·렌즈·시장 동향
+★ CineStill 50D spotlighted as perfect slow speed film for summer — 국내외 필름샵 주문량 급증, 촬영 트렌드 지속 (PetaPixel)
+  ↳ 저감도·색 재현력, 국내 필름 시장 확대
+• The Best Deals on Versatile Zooms for Mirrorless Cameras — 렌즈 시장 경쟁 심화, 주요 브랜드 할인 (PetaPixel)
 
-<Tech·AI> AI 정책·신제품·투자 동향
-★ Federal employees can download TikTok again — US AI·영상 정책 변화, 크리에이터 영향 (TC)
+<Tech·AI> AI 정책·신제품·투자·영상 활용 변화
+★ Federal employees can download TikTok again — US 영상·AI 정책 변화, 크리에이터 영향 (TC)
   ↳ TikTok 접근성 확대, 영상·AI 활용 환경 변화
-• Databricks hits $188B valuation, extends AI focus — AI 기업 가치 급등 (TC)
-• Vertu launches $6,880 AI agent phone — 고가 AI 기기 시장 진입 (TC)
+• Moonshot AI releases new Kimi model — 중국 AI 경쟁 심화, "full AI communism" 논란 (TC)
+• Google open-sources 3D emoji — 크리에이티브·영상 제작 활용 가능성 (Verge)
 
-<시장> 미국 증시·ETF·환율·금리 동향
+<시장> 미국 증시·ETF·환율·금리·프리랜서 영향
 ★ US stocks open flat; S&P 500, Nasdaq, Dow steady — tech stocks stable, dividend ETFs unchanged (WSJ/Bloomberg)
   ↳ DGRO, VIG 등 ETF 수익률 변동 미미; AAPL/MSFT/V 보합권
-• KRW/USD 환율 1,327원대 유지 — 원화 약세 지속, 수출입 영향 (연합)
+• KRW/USD 환율 1,327원대 유지 — 원화 약세 지속, 수출입·프리랜서 환전 영향 (연합)
 
 <주간 정리> 주요 이슈 및 독자 분야 동향
 • US-Iran tensions escalated, nightly airstrikes and Strait of Hormuz disruptions; global oil, shipping affected (BBC/Al Jazeera/CNN)
 • 한국 집중호우·경제 정책 논란, 반도체 경기·청년 투자 확대 발표 (연합)
 • ‘The Odyssey’ box office surge, Korean OTT 역주행 현상, AI 영화제 수상 등 영화계 변화 (Variety/MTN/파이낸스투데이)
 • CineStill 50D 등 신제품 발표, 필름·렌즈 시장 확대, 국내 수요 급증 (PetaPixel)
-• TikTok AI 정책 변화, Databricks AI 기업 가치 급등, AI 기기 시장 진입 (TC/Verge)
+• TikTok AI 정책 변화, Moonshot Kimi 신모델 출시, Databricks AI 기업 가치 급등 (TC/Verge)
 • US stocks steady, DGRO/VIG/AAPL/MSFT/V 안정, KRW/USD 환율 약세 지속, 금리 동결 전망 (WSJ/연합)
