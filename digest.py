@@ -52,7 +52,9 @@ FEEDS = {
         "https://www.theverge.com/rss/index.xml",
     ],
     "Markets": [
-        "https://www.cnbc.com/id/15839069/device/rss/rss.html",    # CNBC Markets
+        "https://www.cnbc.com/id/15839069/device/rss/rss.html",    # CNBC Markets (US general)
+        "https://news.google.com/rss/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4%20OR%20%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90&hl=ko&gl=KR&ceid=KR:ko",  # SK하이닉스/삼성전자
+        "https://news.google.com/rss/search?q=SanDisk%20OR%20%22memory%20chip%22%20stock&hl=en-US&gl=US&ceid=US:en",  # SanDisk / memory sector
     ],
 }
 
@@ -178,7 +180,7 @@ def build_prompt(sections):
         budget = "STRICT LIMIT: total under 880 characters — it must fit ONE KakaoTalk message. One line per story, no subtext lines."
         per_section = "1-3 stories per section, single line each"
     else:
-        budget = "LIMIT: each section under 800 characters. Total under 3500 characters."
+        budget = "LIMIT: each section under 900 characters. Total under 4500 characters."
         per_section = "2-4 stories per section"
 
     yesterday = load_yesterday()
@@ -200,7 +202,7 @@ YESTERDAY:
             weekly_block = f"""
 SUNDAY EXTRA — after the normal sections, append ONE final section:
 <주간 정리> one-line summary of the week
-• 3-6 bullets: the week's biggest storylines and how they developed, plus the week in the reader's areas (film industry, his stocks, gear/AI). Same bullet format.
+• 3-6 bullets: the week's biggest storylines and how they developed, plus the week in the reader's areas (film industry, 반도체/메모리 주식, gear/AI). Same bullet format.
 Base it on this week's digests:
 {week_text}
 """
@@ -220,25 +222,30 @@ FORMAT — follow this template EXACTLY. Do not write paragraphs. Every story is
 📰 {today}
 
 <세계> one-line summary of the section's theme
-• headline — micro-context clause (src)
-• headline — micro-context clause (src)
+• headline (src)
+  ↳ 1-2 lines of actual detail: the key facts, numbers, names, what happens next
+• headline (src)
+  ↳ detail
 
 <한국> 섹션 전체를 요약하는 한 줄
-• 헤드라인 — 짧은 맥락 (연합)
-• 헤드라인 — 짧은 맥락 (연합/조선)
+• 헤드라인 (연합)
+  ↳ 핵심 내용 1-2줄: 구체적 수치·인물·다음 단계
+• 헤드라인 (연합/조선)
+  ↳ 상세
 
 <영화> one-line summary
-★ headline directly relevant to the reader — why it matters (src)
-  ↳ one extra detail line for ★ or the biggest story only
-• headline — micro-context (src)
+★ headline directly relevant to the reader (src)
+  ↳ detail + one clause on why it matters to them
+• headline (src)
+  ↳ detail
 
 <장비> ... then <Tech·AI> ... then <시장> ... same pattern.
 
 FORMAT RULES:
 - Section header line = "<이름>" + space + one-line theme summary. Section names exactly: 세계, 한국, 영화, 장비, Tech·AI, 시장, in that order.
 - {per_section}. One blank line between sections. Skip a section entirely if nothing meets the bar — never pad.
-- "★" replaces "•" for stories directly relevant to the reader (film industry, DGRO/VIG/AAPL/MSFT/V, filmmaking gear/AI tools).
-- "  ↳ " subtext lines: max one per section, only under ★ or the day's biggest story.
+- "★" replaces "•" for stories directly relevant to the reader (film industry, SK하이닉스/삼성전자/SanDisk, filmmaking gear/AI tools).
+- EVERY story gets a "  ↳ " detail block of 1-2 short lines under its headline — real substance (numbers, names, causes, next steps), not a restatement of the headline.
 - Selection bar: what a well-informed person MUST know today + what matters to this reader.
 - {budget}
 - Plain text only. No markdown, no preamble, no sign-off.
@@ -410,10 +417,49 @@ def split_sections(text):
         final.extend(chunk_text(c, 950) if len(c) > 950 else [c])
     return final
 
+# ============================================================
+# 3c. MARKET FOOTER — KOSPI · S&P500 · NASDAQ · USD/KRW
+# ============================================================
+
+FOOTER_SYMBOLS = [("^KS11", "KOSPI"), ("^GSPC", "S&P500"), ("^IXIC", "NASDAQ"), ("KRW=X", "₩/$")]
+
+def market_footer():
+    """One line of index levels + daily change. Returns '' on any failure."""
+    parts = []
+    for symbol, label in FOOTER_SYMBOLS:
+        try:
+            r = requests.get(
+                f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}",
+                params={"range": "1d", "interval": "1d"},
+                headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
+            meta = r.json()["chart"]["result"][0]["meta"]
+            price = meta["regularMarketPrice"]
+            prev = meta.get("chartPreviousClose") or meta.get("previousClose") or price
+            chg = (price - prev) / prev * 100 if prev else 0
+            if label == "₩/$":
+                parts.append(f"₩{price:,.0f}/$")
+            else:
+                parts.append(f"{label} {price:,.0f} ({chg:+.1f}%)")
+        except Exception as e:
+            print(f"[warn] footer {symbol} failed: {e}")
+    return "📊 " + " · ".join(parts) if parts else ""
+
+def attach_footer(chunks, footer):
+    """Append the footer inside the <시장> message, or the last message as fallback."""
+    if not footer:
+        return chunks
+    for i, c in enumerate(chunks):
+        if c.startswith("<시장>"):
+            chunks[i] = c + "\n\n" + footer
+            return chunks
+    chunks[-1] = chunks[-1] + "\n\n" + footer
+    return chunks
+
 def send_kakao(text):
     token = kakao_access_token()
     link = PAGES_URL or "https://news.google.com"
     chunks = split_sections(text) if SEND_MODE == "sections" else chunk_text(text, 950)
+    chunks = attach_footer(chunks, market_footer())
     for i, chunk in enumerate(chunks):
         if i == len(chunks) - 1 and PAGES_URL:
             chunk += f"\n\n🔗 웹 버전 (단어 탭 번역): {PAGES_URL}"
