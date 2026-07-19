@@ -1,0 +1,44 @@
+📰 2026-07-20 (Mon)
+
+<세계> US-Iran tensions, Ukraine conflict, global economic signals
+• US-Iran hostilities escalate — update: Iran launches missile strike on US base in Kuwait; Pentagon confirms casualties, US vows further response (BBC/CNN/Reuters)
+  ↳ Oil prices rise, shipping routes under review; diplomatic channels strained
+• Russia launches largest missile barrage on Ukraine — update: Over 20 cities hit, 15+ fatalities reported, Kyiv restricts mobile networks in affected regions (BBC/AP/politico.eu)
+  ↳ Infrastructure damage, supply chain disruption, regional security concerns
+
+<한국> 반도체·노동·경제정책·기상 등 주요 이슈
+★ SK하이닉스·삼성전자, 채용전 확대 — 새 전개: 해외 인재 유치 프로그램 발표, AI·메모리 분야 집중 (뉴시스/한국경제)
+  ↳ 글로벌 경쟁력 강화, 국내외 생산·R&D 투자 확대
+• 충남 홍성서부 호우주의보 발효 — 아산·금산 폭염주의보 유지 (연합)
+  ↳ 기상 영향, 현장 작업자 안전 유의
+• 한국은행, 예금토큰 실거래 9월 시작 예고 — CBDC 기반 프로젝트 한강 2단계 본격화 (연합)
+  ↳ 디지털화폐 실증 확대, 금융시장 변화 촉진
+
+<영화> 글로벌 박스오피스·제작·국내외 수상·AI 논의
+★ ‘The Odyssey’ global debut hits $264M — update: Nolan 신작, 국내 OTT·극장 유통사 추가 투자 검토 (Variety/THR)
+  ↳ 한국 배급사·제작사 영향, 투자·제작 전략 조정 필요
+• 송파 청소년 영화인, 국제영화제 본상 2년 연속 수상 (헤럴드경제)
+  ↳ 신인 감독 지원 확대, 국내 영화계 인재 육성
+• 화순 청풍초 제작 영화, 국제영화제 3관왕 (v.daum.net)
+  ↳ 지역 영화교육·제작 활성화
+
+<장비> 신제품·메모리·촬영 환경 변화
+★ SanDisk stock volatile: up 580% YTD, down 29% in a week — update: AI storage 수요 영향, 품질 논란 지속 (Yahoo Finance/Motley Fool/TechStock²/24/7 Wall St.)
+  ↳ 메모리·스토리지 시장 변동성, 영상 촬영 데이터 관리 주의 필요
+• Photographer loses job after memory card failure — counterfeit card issue, data recovery 불가 (PetaPixel)
+  ↳ 현장 장비 선택 중요성, SanDisk·SK하이닉스 등 정품 사용 권장
+• Kodak EC35 출시 — 35mm 필름카메라 $34.99, 저가 시장 확대 (Verge)
+
+<Tech·AI> AI 영상·음악·정책·제작 도구 동향
+★ Christopher Nolan, AI 활용에 ‘Trojan horse’ 경고 — ‘Odyssey’ 제작 관련 발언, 영상·이미지 생성 AI 논의 심화 (TC)
+  ↳ AI 도구 활용 논쟁, 국내 영상 제작자 적용 사례 분석 필요
+• Suno AI, 음악 생성 플랫폼 인기 상승 — 사용자·음악가 반응 엇갈림 (Verge)
+• Birdfy AI 스마트 피더, $149 할인 — 영상·이미지 AI 활용 확대 (Verge)
+
+<시장> 반도체·증시·환율·프리랜서 경제 영향
+★ SK하이닉스 184만원, 삼성전자 25만원 — update: 해외 인재 유치·AI 투자 발표 후 주가 변동; 코스피 반도체주 집중 (네이버 프리미엄콘텐츠/한국경제)
+  ↳ 메모리·AI 수요 전망, 국내외 증시 심리 영향
+★ SanDisk 주가 급락 후 반등 전망 — AI storage 시장 성장 기대, 단기 변동성 확대 (Yahoo Finance/Motley Fool/TechStock²)
+  ↳ 영상 데이터 저장·편집 시장 영향, 장비 투자 판단 중요
+• KRW/USD 환율 1,329원대 유지 — 원화 약세, 수출입·프리랜서 환전 부담 지속 (연합)
+• 한국은행 기준금리 동결 전망 — 대출·이자 부담 완화 기대 (연합)
