@@ -2,7 +2,7 @@
 # Lines starting with # are ignored. Prefix with "-" to de-prioritize a topic.
 
 Film industry news, domestic (한국) and international: production, box office, studios, distribution, festivals
-US stock market, dividend/ETF investing — holds DGRO, VIG, AAPL, MSFT, V
+General stock market news (US + 한국 증시); watching closely: SK하이닉스, 삼성전자, SanDisk (memory/semiconductor sector)
 AI tools for video/image generation and filmmaking (Midjourney, Seedance, Kling, Runway etc.)
 Korean economy news affecting freelancers (tax, interest rates, KRW/USD exchange rate)
 Camera/cinema gear: new cameras, lenses, lights, rigs, firmware (RED, ARRI, Sony, Canon, Blackmagic, DJI, Aputure etc.)
