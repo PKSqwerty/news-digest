@@ -1,0 +1,48 @@
+📰 2026-07-21 (Tue)
+
+<세계> US-Iran conflict, Ukraine war, global market volatility
+• US-Iran tensions persist — update: US deploys additional naval assets to Persian Gulf; Iran warns of further escalation (BBC/CNN/Reuters)
+  ↳ Oil prices remain elevated; shipping insurance premiums up, regional stability concerns
+• Russia-Ukraine conflict: Kyiv reports new drone attacks overnight, 6 injuries (BBC/AP)
+  ↳ Infrastructure repair ongoing; international aid mobilized
+
+<한국> 반도체·노동·경제·기상 주요 이슈
+★ SK하이닉스·삼성전자, 채용전 확대 — 새 전개: 국내 특성화대학과 협력, 반도체 인재 양성 프로그램 발표 (한국경제/서울Pn)
+  ↳ 산학협력 강화, AI·메모리 분야 인재 확보 목적
+• 카카오 노조 판교 집회 개최 — 서비스 정상 운영 (연합)
+  ↳ 노사 협상 지속, 프리랜서 플랫폼 영향 없음
+• 홈플러스 휴업에 카드사 대금 지급 보류 (연합)
+  ↳ 결제 취소 리스크 관리, 유통업계 불확실성 확대
+
+<영화> 국내외 제작·배급·축제·AI 활용 동향
+★ Paramount-Warner Bros. merger paused by US judge — 새 전개: 2주간 합병 중지 명령, 극장·케이블·관객 영향 논의 (TC/Verge/연합)
+  ↳ 글로벌 배급·제작사 전략 변동, 한국 투자·유통사 대응 필요
+• 전주국제영화제, 관객 증가에도 예산 축소 논란 (전북일보)
+  ↳ 국내 영화제 운영·지원 정책 검토 필요
+• 목포 독립영화제 내달 개최 — 77편 상영 예정 (연합)
+  ↳ 신진 감독·독립영화 제작 활성화
+
+<장비> 신제품·펌웨어·촬영 환경 변화
+★ Tilta Nucleus-M II Wireless Lens Control System firmware update released (Newsshooter)
+  ↳ Nucleus Auto Focus 지원, 렌즈 라이브러리·터치스크린 개선; 현장 렌즈 운용 효율성 증가
+• edelkrone Krone X Compact 발표 — 최대 7축 모션, 백팩 크기 (CineD)
+  ↳ 이동·설치 간편, 다축 촬영 솔루션 확대
+• Viltrox AF 26mm f/2.8 EVO 렌즈 출시 — Sony E/Nikon Z 대응 (CineD)
+  ↳ 경량·광각, 현장 스냅·영상 촬영 활용도 높음
+
+<Tech·AI> AI 도구·정책·영상 제작 영향
+★ AI기본법 후속 개정안 시행 — 국내 AI 산업 현장 적용 본격화 (연합)
+  ↳ 영상·이미지 생성 AI 활용 규제·지원 체계 변화, 프리랜서 업무 영향
+• Adobe camera app adds AI background removal feature (TC)
+  ↳ 사진·영상 편집 자동화, 현장 작업 효율성 증가
+• Model Context Protocol (MCP) usability improved (TC)
+  ↳ AI 모델 외부 데이터 접근·연동 간소화, 영상 제작 워크플로우 변화
+
+<시장> 반도체·증시·환율·프리랜서 경제 영향
+★ 삼성전자·SK하이닉스 프리마켓서 5% 이상 하락 — AI 버블론·실적 논란 속 단기 변동성 확대 (머니투데이/비즈니스포스트/v.daum.net)
+  ↳ 메모리·AI 수요 불확실성, 장비 투자·증시 심리 영향
+★ SanDisk·Micron 등 메모리주 반등 — SanDisk 6% 상승, Micron 5% 상승 (Yahoo Finance/Motley Fool/24/7 Wall St./Investing.com)
+  ↳ AI storage 시장 기대, 영상 데이터 관리·장비 투자 판단 중요
+• KRW/USD 환율 1,330원대 상승 — 원화 약세 지속 (연합)
+  ↳ 수출입·프리랜서 환전 부담 확대
+• 한국은행 기준금리 동결 전망 — 대출·이자 부담 완화 기대 (연합)
