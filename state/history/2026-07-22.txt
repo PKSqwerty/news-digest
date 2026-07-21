@@ -1,0 +1,49 @@
+📰 2026-07-22 (Wed)
+
+<세계> US-Iran, Ukraine, global trade, oil, and security updates
+• US-Iran conflict escalates — update: US launches new airstrikes; Iran claims attacks on ships in Hormuz, Bahrain, Jordan (BBC/CNN/Reuters)
+  ↳ Oil prices up 2%; shipping routes disrupted, insurance costs rising, regional instability persists
+• Ukraine: Zelensky dismisses army chief Syrskyi after protests (BBC/AP)
+  ↳ Shake-up follows unrest over earlier defense minister removal; Kyiv continues drone defense, repairs ongoing
+
+<한국> 반도체·경제·노동·기술·기상 주요 이슈
+★ 삼성전자, 런던 언팩서 폴드8·스마트글래스 공개 (연합)
+  ↳ 폴더블폰 신제품·스마트글래스 첫 공개, 영상·촬영 현장 활용 기대
+• 7월 중순 수출액 549억달러 신기록 — 반도체 호조 영향 (연합)
+  ↳ 전년 대비 52.3% 증가, 메모리·AI 수출 확대
+• 비은행권 주택대출 10.5조 증가 — 은행권 대출 규제 영향 (연합)
+  ↳ 프리랜서 대출·이자 부담 변화, 금융시장 유동성 확대
+
+<영화> 국내외 제작·배급·축제·AI 활용 동향
+★ 이창동 ‘가능한 사랑’·연상호 ‘실낙원’ 토론토영화제 초청 (한겨레)
+  ↳ 한국 감독 신작 해외 진출, 국제 배급·투자 기회 확대
+• ‘Avengers: Doomsday’ advance ticket sales hit $16.5M after first day (Variety)
+  ↳ Marvel 신작 흥행 기대, 글로벌 시장·배급사 전략 영향
+• 판타지아 국제영화제 감독상 수상작 ‘매쉬빌’ 국내 첫 공개 (디지털데일리)
+  ↳ 해외 수상작 국내 상영, 신진 감독·독립영화 제작 활성화
+
+<장비> 신제품·펌웨어·촬영 환경 변화
+★ ByteDance Seedance 2.5 API 공개 — 30초 단일 클립·50개 레퍼런스 입력 지원 (CineD)
+  ↳ 영상 생성 AI 현장 적용 확대, 프리랜서 워크플로우 변화
+• NiSi 16mm f/2.8 Medium Format Lens for FUJIFILM G & Hasselblad XCD announced (CineD)
+  ↳ 초광각·수동포커스, 대형 센서 촬영 솔루션 강화
+• SmallHD ULTRA 10 Bolt 6 RX 1500 Monitor $2,700 할인 판매 (Newsshooter)
+  ↳ 고휘도 모니터, 야외 촬영·무선 송수신 효율성 증가
+
+<Tech·AI> 영상·이미지 생성 AI, 플랫폼·정책 변화
+★ OpenAI admits Hugging Face breach caused by pre-release model testing (TC)
+  ↳ AI 플랫폼 보안 이슈, 영상·이미지 생성 도구 신뢰성 검토 필요
+• Substack adds AI detector for blog content (Verge)
+  ↳ AI 생성 텍스트 판별 기능, 콘텐츠 신뢰성·저작권 관리 강화
+• Jack Dorsey launches Buzz, group chat platform for humans & AI agents (TC)
+  ↳ AI 협업·팀 커뮤니케이션 변화, 영상 제작 워크플로우 영향
+
+<시장> 반도체·증시·환율·프리랜서 경제 영향
+★ SK하이닉스·삼성전자, 6~7%대 동반 급등 — 반도체주 회복세 (매일경제/조선비즈/한국경제)
+  ↳ HBM4 수요·AMD 협력 기대, 메모리·AI 투자 심리 개선
+★ SanDisk 주가 연속 상승 — AI storage 기대, 주식 분할 논의 (Yahoo Finance/Benzinga/Motley Fool/Investing.com)
+  ↳ 영상 데이터 관리 수요 반영, 장비 투자 판단 중요
+• KRW/USD 환율 1,330원대 유지 — 원화 약세 지속 (연합)
+  ↳ 수출입·프리랜서 환전 부담 확대
+• 한국은행 기준금리 동결 전망 유지 (연합)
+  ↳ 대출·이자 부담 완화, 프리랜서 금융 환경 안정
