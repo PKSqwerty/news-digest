@@ -1,0 +1,59 @@
+📰 2026-07-23 (Thu)
+
+<세계> US-Iran tensions, Saudi nuclear deal, global oil, and shipping disruptions
+• US-Saudi nuclear deal confirmed; enrichment allowed, Israeli and US lawmakers voice concerns (BBC/Guardian/WSJ)
+  ↳ Saudi Arabia gains uranium enrichment rights; potential regional security implications, deal details pending Congressional review
+• Trump threatens Iranian infrastructure if Hormuz attacks persist; tankers reroute after Houthi threats (BBC/CNN/NYT)
+  ↳ Oil prices rise to $94/barrel; shipping insurance costs up, major tankers avoid Red Sea routes
+• Tropical Storm Bertha floods Louisiana, Virginia, Carolinas (FOX Weather)
+  ↳ Severe weather disrupts logistics, coastal evacuations underway
+
+<한국> 반도체·경제·정책·노동·기술 주요 이슈
+★ 삼성전자, 폴드8·울트라·플립8·스마트글래스 정식 공개 (연합/Verge)
+  ↳ 폴더블 신모델·스마트글래스 9시간 배터리·AI 기능, 8월 7일 출시 예정
+• 하도급대금 연동제 도입에도 41% 수급업자 계약 미반영 (연합)
+  ↳ 정책 인지도 부족, 중소기업 거래 개선 필요
+• 7월 수출액 신기록 — 반도체·AI 수출 확대 지속 (연합)
+  ↳ 메모리·AI 호조 영향, 프리랜서 산업 수요 증가
+• 이재명 대통령, 부동산 대토론회 개최 — 보유세 등 쟁점 논의 (연합)
+  ↳ 부동산 정책 방향, 프리랜서 주거·세금 영향
+
+<영화> 국내외 제작·배급·AI 활용·축제 동향
+★ 제1회 대전국제 AI영화제 개최 — 혁신적 AI 영화 상영 (다음)
+  ↳ AI 활용 영화 제작·배급 트렌드 확인, 프리랜서·DOP 현장 적용 사례 공유
+• Darren Aronofsky raising $15M for AI film studio Primordial Soup (THR)
+  ↳ AI 기반 영화 제작 확대, 독립·실험적 프로젝트 투자 유치
+• YouTube Q2 광고매출 110억달러 기록 — 영상 플랫폼 성장 지속 (Variety/THR)
+  ↳ 영상 배급·광고 수익 모델 변화, 크리에이터·제작사 영향
+• 울주산악영화제, 탈북민·청소년·중년 삶 다룬 영화 3편 무료 상영 (연합)
+  ↳ 사회적 주제·독립영화 활성화, 지역 축제 참여 확대
+
+<장비> 신제품·펌웨어·촬영 환경 변화
+★ Sony FX5 공식 발표 — 5K Open Gate, X-OCN RAW, 세 가지 베이스 ISO (CineD/Newsshooter/PetaPixel)
+  ↳ VENICE2/BURANO 기능 소형화, 메모리 카드 요구 엄격; 프리랜서 현장 업그레이드 고려 필요
+• MID49, FX5 액세서리·15mm LW Dovetail 출시 (Newsshooter)
+  ↳ 촬영 환경 맞춤 솔루션, 장비 호환성 강화
+• DaVinci Resolve 21.0.3 업데이트 — 인터레이스·QuickSync 지원 (Newsshooter)
+  ↳ 편집·후반 작업 효율 개선, 워크플로우 최적화
+• Viltrox, Micro Four Thirds 렌즈 공개 임박 (PetaPixel)
+  ↳ 대형 센서·마운트 다양화, 렌즈 선택 폭 확대
+
+<Tech·AI> 영상·이미지 생성 AI, 플랫폼·정책 변화
+★ Treasury warns sanctions after Moonshot distills Anthropic’s Fable AI model (TC)
+  ↳ AI 모델 보안·저작권 이슈, 영상·이미지 생성 도구 신뢰성 검토 필요
+• SoundCloud acquires Nina Protocol — decentralized music platform integration (TC)
+  ↳ 음악·영상 플랫폼 기능 확대, 크리에이터 유통 경로 변화
+• Tesla revenue up 26%, but profits weak as Cybercab/Semi launch delayed (Verge/TC)
+  ↳ 신제품 출시 지연, AI·자동차 산업 투자 영향
+• iOS 27, 미납 아이폰 결제시 앱 제한 기능 테스트 중 (Verge)
+  ↳ 기기·앱 결제 정책 변화, 프리랜서 장비 관리 주의
+
+<시장> 반도체·증시·환율·프리랜서 경제 영향
+★ 삼성전자·SK하이닉스 강세 — 반도체주 5~8%대 상승, 미국 반도체주 연동 (에너지경제/이투데이/비즈니스포스트)
+  ↳ HBM4·AI 수요, 로봇 기대감; 프리랜서 장비 투자 심리 개선
+★ SanDisk 주가 혼조 — AI storage 기대·7월30일 이후 하락 전망 엇갈림 (Yahoo Finance/Motley Fool/Benzinga/Trefis)
+  ↳ 일부 매도세·분할 논의, 8월5일 실적 발표 주목
+• KRW/USD 환율 1,330원대 유지 — 원화 약세 지속 (연합)
+  ↳ 수출입·환전 부담, 프리랜서 해외 결제 영향
+• 한국은행 기준금리 동결 전망 유지 (연합)
+  ↳ 대출·이자 부담 완화, 프리랜서 금융 환경 안정
