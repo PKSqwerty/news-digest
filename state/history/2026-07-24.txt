@@ -1,0 +1,57 @@
+📰 2026-07-24 (Fri)
+
+<세계> Oil, US-Saudi nuclear deal, and global volatility continue
+• Brent crude tops $100/barrel — oil price surge amid Red Sea disruptions (BBC/CNBC/연합)
+  ↳ Oil up 7% in two days; shipping reroutes, Goldman Sachs warns price could reach $120 if tensions persist
+• US House votes to limit Iran war powers; Trump adds Israel normalization condition to Saudi nuclear deal (Al Jazeera/Washington Post/BBC)
+  ↳ Congressional pushback on military action; Saudi deal details pending, regional security implications
+
+<한국> 반도체·환율·정책·노동·대통령 순방 주요 이슈
+★ 삼성전자·SK하이닉스 4~5% 급등 — 코스피 7000 회복 (연합/조선/뉴스1)
+  ↳ 반도체주 강세, HBM4·AI 수요 영향; 프리랜서 장비 투자 심리 개선
+• 미 재무부, 한국 환율 관찰대상국 유지 (연합)
+  ↳ 원화 약세 지속, 환전·수출입 부담; 프리랜서 해외 결제 영향
+• 이재명 대통령, 샌프란시스코·남미·독일 순방 시작 (연합)
+  ↳ 경제·기술 협력 논의, 프리랜서 산업 환경 변화 기대
+• 하도급대금 연동제 미반영 계약 41% — 정책 실효성 논란 (연합)
+  ↳ 중소기업 거래 개선 필요, 프리랜서 하도급 영향
+
+<영화> 국내외 제작·배급·축제·AI 활용 동향
+★ 이창동 감독 '가능한 사랑', 베네치아영화제 경쟁 부문 초청 (연합/조선)
+  ↳ 한국 영화 국제 진출, 프리랜서·DOP 협업 기회 확대
+• Indian Epic ‘Ramayana’ lands at Sony Pictures for global distribution (Variety/THR)
+  ↳ 대형 인도 영화 국제 배급, 아시아 영화시장 영향
+• L.A. filming levels drop 12% despite incentives (THR)
+  ↳ 미국 촬영일 감소, 글로벌 제작 환경 변화
+• ‘Avatar: Seven Havens’ sets Oct 9 release on Paramount+ (Variety)
+  ↳ 대형 프랜차이즈 스트리밍 진출, 배급 트렌드 변화
+
+<장비> 신제품·앱·펌웨어·액세서리 주요 동향
+★ SmallRig, Sony FX5용 모듈형 케이지 키트 출시 (Newsshooter)
+  ↳ FX5 액세서리 다양화, 현장 촬영 효율성 증가; 프리랜서 장비 업그레이드 고려
+• DaVinci Resolve 21.0.3 업데이트 — 키프레임·X-OCN RAW 지원 (CineD)
+  ↳ 편집·후반 작업 기능 개선, Sony BURANO 호환성 강화
+• Ingesto, 무료 카메라 카드 오프로드 툴 공개 (Newsshooter)
+  ↳ Mac/Windows 지원, 데이터 복사·검증 자동화
+• Anton/Bauer Dionic 98Wh 26V Gold Mount Plus 배터리 $400 할인 (Newsshooter)
+  ↳ ARRI·RED 등 시네마 카메라 호환, 장비 투자 비용 절감
+
+<Tech·AI> AI 영상·음성·플랫폼·반도체 경쟁 동향
+★ AMD, Helios AI 랙스케일 시스템 공개 — Nvidia와 경쟁 (TC)
+  ↳ AI 에이전트·영상 생성 시장 겨냥, 하드웨어 투자 확대; 프리랜서 AI 활용 환경 변화
+• Anthropic, Claude 음성모드 Opus/Sonnet 모델로 확대 (TC/Verge)
+  ↳ AI 음성 기능 강화, 영상·이미지 생성 워크플로우 개선
+• Patreon, 직원 20% 감축 — 시장 변화 대응 (TC/Verge)
+  ↳ 크리에이터 플랫폼 구조조정, 프리랜서 수익 모델 영향
+• Tesla, 도어핸들 안전규정 논의 시작 (TC)
+  ↳ 차량·장비 안전 정책 변화, 현장 촬영 환경 영향
+
+<시장> 반도체·증시·환율·프리랜서 경제 영향
+★ 삼성전자·SK하이닉스 강세 — 장 초반 4~5% 상승, 코스피 7000 탈환 (연합/조선/뉴스1)
+  ↳ HBM4·AI 수요, 장비 투자 심리 개선; 프리랜서 현장 영향
+★ SanDisk 주가 4.3% 상승 — 전문가 전망 엇갈림, 2027년 가격 예측 다양 (Forbes/Yahoo/Motley Fool/Barchart/NAI500/TradingKey)
+  ↳ 일부 목표가 하향·장기 상승 기대, 8월 실적 발표 주목
+• KRW/USD 환율 1,330원대 유지 — 환율 관찰대상국 지정 (연합)
+  ↳ 원화 약세, 해외 결제·수입 장비 부담 지속
+• 금값 강세 — 장기 상승 전망 (CNBC)
+  ↳ 중앙은행·민간 수요 확대, 투자 포트폴리오 변화
